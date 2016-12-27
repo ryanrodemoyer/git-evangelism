@@ -29,7 +29,7 @@
     * TFS sometimes requires new files to be explicitly added to source control.
         * Git will always show files that are not committed to repository (unless a match is found in .gitignore).
     * Files stay checked out/modified in TFS even if changes are not actually made to the file.
-        * Undo'ing changes to a file can force Git to show the file as not modified.
+        * Undo'ing changes to a file forces Git to show the file as not modified.
     * Files modified outside of Visual Studio do not display as modified.
         * Git tracks file changes by file content and not Read Only flags or other avenues.
     
@@ -41,13 +41,30 @@
     * BitBucket
     * etc
 * Command Line Setup
-    * Initial configuration required by new Git installation
+    * Download and install Git.
+        1. https://git-scm.com/download/win 
+    * Initial configuration required by new Git installation.
+        * git config username
+        * git config email
+        * git config difftool
+        * git config mergetool
     * SSH keys
+        * Follow the steps from https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key
+            1. Open Git Bash.
+            2. Paste the text below, substituting in your GitHub email address. 
+               `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`
+               This creates a new ssh key, using the provided email as a label.
+               `Generating public/private rsa key pair.`
+            3. When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.
+                `Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]`
+            4. At the prompt, type a secure passphrase.
+                `Enter passphrase (empty for no passphrase): [Type a passphrase]
+                Enter same passphrase again: [Type passphrase again]`
     * difftool w/ Beyond Compare
 * SmartGit Setup
 
 ## Create Project
-* Create project in [SCP]
+* Create project in Source Control Provider
 * Clone locally
 * Remotes (git remote show)
     * auto remote when cloning (origin)
