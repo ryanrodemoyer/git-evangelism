@@ -12,7 +12,7 @@ Git Evangelism @ Mortgage Cadence
 * Survey
 * Brief history of Git
     * Creator
-    * Why it was created
+    * Why Git was created
     * Revolutionized open source
 * TFS Painpoints (mine)
     * see bottom of doc
@@ -25,8 +25,6 @@ Git Evangelism @ Mortgage Cadence
     * BitBucket (https://bitbucket.org/)
     * etc
 * Command Line Setup
-    * Download and install Git.
-        1. https://git-scm.com/download/win 
     * Initial configuration required by new Git installation. We use the `--global' flag so settings are stored in C:\Users\profile\\.gitconfig. All repositories on your system will respect this configuration information.
         * git config user name  
             `git config --global user.name yourname`  
