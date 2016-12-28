@@ -15,30 +15,7 @@ Git Evangelism @ Mortgage Cadence
     * Why it was created
     * Revolutionized open source
 * TFS Painpoints (mine)
-    * A shelveset is restorable only to the branch where it was created.
-        * Git solves with local branches and stashes.
-    * Code reviews are not easily collaborative.
-        * Source Control Provider solves with pull requests.
-    * Not possible to see changes/differences across code reviews.
-        * Becomes a non-issue with pull requests
-    * Visual Studio centric.
-        * Command line is first class citizen and over a dozen GUI tools (including Visual Studio integration).
-    * Enforces linear workflow.
-        * Git opens door for powerful workflow to easily move between features/branches/TFS projects.
-    * Merges can be a nightmare.
-        * Merges are typically better because Git knows more about your branching history but it can still get ugly if you let it.
-    * Merges can take a long time.
-        * Merges are typically quick.
-    * Extracting specific features from a branch is a manual process.
-        * Branching model can allow features to get moved/copied/merged across different branches with ease.
-    * TFS does not always show you when a file is added/modified/removed.
-        * Git will always show files that are different (based on content - timestamp is not a factor).
-    * TFS sometimes requires new files to be explicitly added to source control.
-        * Git will always show files that are not committed to repository (unless a match is found in .gitignore).
-    * Files stay checked out/modified in TFS even if changes are not actually made to the file.
-        * Undo'ing changes to a file forces Git to show the file as not modified.
-    * Files modified outside of Visual Studio do not display as modified.
-        * Git tracks file changes by file content and not Read Only flags or other avenues.
+    * see bottom of doc
     
 ## Initial Configuration
 * Choose source control provider
@@ -158,3 +135,32 @@ Git Evangelism @ Mortgage Cadence
 
 ## Wrap Up
 * Random discussions or take-aways for follow up or simply so it is not lost.
+
+## Appendix
+* TFS Painpoints
+    * Branches map to physical folder locations on disk.
+        * Git uses one folder for everything. 
+    * A shelveset is restorable only to the branch where it was created.
+        * Git solves with local branches and stashes.
+    * Code reviews are not easily collaborative.
+        * Source Control Provider solves with pull requests.
+    * Not possible to see changes/differences across code reviews.
+        * Becomes a non-issue with pull requests
+    * Visual Studio centric.
+        * Command line is first class citizen and over a dozen GUI tools (including Visual Studio integration).
+    * Enforces linear workflow.
+        * Git opens door for powerful workflow to easily move between features/branches/TFS projects.
+    * Merges can be a nightmare.
+        * Merges are typically better because Git knows more about your branching history but it can still get ugly if you let it.
+    * Merges can take a long time.
+        * Merges are typically quick.
+    * Extracting specific features from a branch is a manual process.
+        * Branching model can allow features to get moved/copied/merged across different branches with ease.
+    * TFS does not always show you when a file is added/modified/removed.
+        * Git will always show files that are different (based on content - timestamp is not a factor).
+    * TFS sometimes requires new files to be explicitly added to source control.
+        * Git will always show files that are not committed to repository (unless a match is found in .gitignore).
+    * Files stay checked out/modified in TFS even if changes are not actually made to the file.
+        * Undo'ing changes to a file forces Git to show the file as not modified.
+    * Files modified outside of Visual Studio do not display as modified.
+        * Git tracks file changes by file content and not Read Only flags or other avenues.
