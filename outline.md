@@ -75,7 +75,7 @@ Git Evangelism @ Mortgage Cadence
 * GUI tool Setup
     * My personal opinion in this: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and SmartGit is my personal favorite GUI tool for Git. SmartGit is free for personal use and requires a paid license otherwise.
 
-## Create Project
+## Using Git (locally)
 * Getting Started (local version)
     * Create local repository.
         * Start with new folder or add existing project.  
@@ -89,7 +89,7 @@ Git Evangelism @ Mortgage Cadence
    * `git status`
 * diffs and commits
     * two stage commits  
-        `git add .` to Stage everything that is modified or `git add <filename>` to Stage specific files
+        `git add .` to Stage everything that is modified or `git add <filename>` to Stage specific files  
         `git commit` to open text editor for commit message or `git commit -m <message>`
     * two stage commits - expanded
       * notice that you can continue to modify a file after it is Staged. `git status` will show the file as Staged and also as Modified. Commit the file with `git commit` and notice the file is still in a modified state after the commit.
@@ -104,7 +104,31 @@ Git Evangelism @ Mortgage Cadence
             `start git difftool <path/to/file>`
 * Commit History
    * `git log`
-* Getting Started (SCP version)
+* Branches
+   * Notes:
+      * This is where the fun starts.
+      * Branches are lightweight and quick and easy to create.
+   * First set of commands for branches.
+      * Create a new branch and do nothing else.  
+         `git branch <branch-name>`
+      * Switch to a different branch.  
+         `git checkout <branch-name>`
+      * Create a new branch __and__ switch to it (shortcut).  
+         `git checkout -b <branch-name>`
+   * Start working on your feature and/or specific set of related changes. Commit. Commit. Commit.
+   * When you're ready to merge changes with the parent branch:
+      * Commit, undo or stash all changes in workspace.
+      * Switch to parent branch.  
+         `git checkout <parent-branch-name>`
+      * Merge child branch in to parent branch.  
+         `git merge <child-branch-name> --no-ff`
+   
+# Using Git (with SCP)
+* Why do I need SCP?
+   * Serve as a backup.
+   * Project management tools.
+   * __Enable collaboration__.
+* Getting Started
    * Create project in Source Control Provider.
       * Clone locally.  
          `git clone <url> [<name>]`
