@@ -42,8 +42,10 @@ Git Evangelism @ Mortgage Cadence
             `git config --global mergetool.bc.path C:/Program Files/Beyond Compare 4/bcomp.exe`  
         * git config editor (default editor is Vim so if you love Vim then disregard this command)
             `git config --global core.editor 'C:/Program Files/Sublime Text 3/subl.exe' -w`
+        * git configure merge to use no fast forward by default  
+            `git config --global merge.ff no`
     * SSH keys
-        * Follow the steps from https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key.
+        * Steps below lifted from https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key.
             1. Open Git Bash.  
             2. Paste the text below, substituting in your GitHub email address.  
                `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
@@ -81,10 +83,12 @@ Git Evangelism @ Mortgage Cadence
         * Start with new folder or add existing project.  
             `git init`
 * .gitignore
-    * Create by issuing the following command in root of repository (same location as the .git folder).  
-        `touch .gitignore`
-    * https://www.gitignore.io/
-    * Define patterns for files/folders/paths and Git will ignore any matching files **not** already added to the repository.
+   * Define patterns for files/folders/paths and Git will ignore any matching files **not** already added to the repository.
+   * Create by issuing the following command in root of repository (same location as the .git folder).  
+      `touch .gitignore`
+   * https://www.gitignore.io/ is a tool that will provide fully generated .gitignore files for virtually any language/toolset in use today. For .NET development, search "VisualStudio" or "VisualStudioCode".
+      * https://www.gitignore.io/api/visualstudio
+      * https://www.gitignore.io/api/visualstudiocode
 * Current State of Repository
    * `git status`
 * diffs and commits
@@ -100,7 +104,7 @@ Git Evangelism @ Mortgage Cadence
             `git difftool <path/to/file>`
         * open folder based view of all modified files in repository  
             `git difftool -d`
-        * preface any of the above diff commands with start to prevent the command prompt from blocking
+        * preface any of the above `diff` commands with `start` to prevent the command prompt from blocking
             `start git difftool <path/to/file>`
 * Commit History
    * `git log`
@@ -133,10 +137,10 @@ Git Evangelism @ Mortgage Cadence
       * Clone locally.  
          `git clone <url> [<name>]`
    * Remotes.
-      * Remote of name "origin" is automagically created when cloing a repository.  
-      `git remote -v show`
+      * Remote of name "origin" is automagically created when cloning a repository.  
+         `git remote -v show`
       * Locally created repositories do not have a default remote. Or, add as many remotes as you like.   
-      `git remote add <name> <url>`
+         `git remote add <name> <url>`
 
 ## Branches and Pull Requests
 * Workflow of creating a branch and opening a pull request.
@@ -150,11 +154,14 @@ Git Evangelism @ Mortgage Cadence
 
 ## Merge and Rebase
 * Merging branches up or down.
-    * fast forward or not fast forward 
+   * fast forward or not fast forward. 
+* Rebase
+   * Rebase a feature branch.
+   * Pull and rebase.
 * Squashing
-    * soft reset
-    * hard reset
-    * interactive rebase
+   * soft reset
+   * hard reset
+   * interactive rebase
 * When to use which
 
 ## Issues Management
