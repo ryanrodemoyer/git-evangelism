@@ -205,3 +205,5 @@ Git Evangelism @ Mortgage Cadence
         * Undo'ing changes to a file forces Git to show the file as not modified.
     * Files modified outside of Visual Studio do not display as modified.
         * Git tracks file changes by file content and not Read Only flags or other avenues.
+* Fun Links
+   * https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf
