@@ -161,6 +161,16 @@ Git Evangelism @ Mortgage Cadence
    * hard reset
    * interactive rebase
 * When to use which
+   * `merge` when integrating from a child branch to the parent branch.
+      * Almost all merge activities should occur in SCP via pull requests. Try to avoid `merge` commands in your local repository unless it's absolutely required.
+   * `rebase` when intergrating from the parent branch to the child branch.
+      * `git pull --rebase` if working on a shared branch
+      * If working on a feature branch:
+         * Switch to parent branch and `git pull --rebase <remote-name> <branch-name>`.
+         * Switch to feature branch and `git rebase <branch-name>` or to clean up local commits `git rebase -i <branch-name>`.
+      * Notes
+         * `rebase` keeps history clean and readable and avoids merge commits (merge commits are noise in feature branches)
+         * `rebase` is rewriting history - BE CAREFUL IF YOU'VE ALREADY PUSHED YOUR BRANCH TO THE REMOTE!
 
 ## Issues Management
 * Create issues in Source Control Provider.
