@@ -21,59 +21,57 @@ Git Evangelism @ Mortgage Cadence
     * see bottom of doc
     
 ## Initial Configuration
-* Choose source control provider
-    * GitHub (https://github.com/)
-    * GitLab (https://about.gitlab.com/)
-    * Visual Studio Online (https://www.visualstudio.com/)
-    * BitBucket (https://bitbucket.org/)
-    * etc
-* Command Line Setup
-    * Initial configuration required by new Git installation. We use the `--global' flag so settings are stored in C:\Users\profile\\.gitconfig. All repositories on your system will respect this configuration information. Quotes are not needed around paths with spaces but special characters in the path will require the full path wrapped in quotation marks.
-        * git config user name  
-            `git config --global user.name yourname`  
-        * git config user email  
-            `git config --global user.email youremail`  
-        * git config difftool  
-            `git config --global diff.tool bc`  
-            `git config --global difftool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
-            `git config --global difftool.prompt false`  
-        * git config mergetool  
-            `git config --global merge.tool bc`  
-            `git config --global mergetool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
-        * git config editor (default editor is Vim so if you love Vim then disregard this command)   
-            `git config --global core.editor 'C:/Program Files/Sublime Text 3/subl.exe' -w`
-        * git configure merge to use no fast forward by default  
-            `git config --global merge.ff no`
-    * SSH keys
-        * Steps below lifted from https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key.
-            1. Open Git Bash.  
-            2. Paste the text below, substituting in your GitHub email address.  
-               `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
-               This creates a new ssh key, using the provided email as a label.  
-               `Generating public/private rsa key pair.`  
-            3. When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.  
-             `Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]`  
-            4. At the prompt, type a secure passphrase.  
-                `Enter passphrase (empty for no passphrase): [Type a passphrase]`  
-                `Enter same passphrase again: [Type passphrase again]`  
-        * Import contents of id_rsa.pub to Source Control Provider. **Keep id_rsa file private and safe!!**
-    * SmartGit with Beyond Compare
-        * Diff
-            * Select __Edit | Preferences__.
-            * Go to __Tools > Diff Tools__.
-            * Click __Add__.
-            * __File Pattern:__ *
-            * Select __External diff tool__.
-            * __Command:__ C:\Program Files\Beyond Compare 4\bcomp.exe
-            * __Arguments:__ /lefttitle="${leftTitle}" /righttitle="${rightTitle}" "${leftFile}" "${rightFile}"
-        * Merge
-            * Select __Edit | Preferences__.
-            * Go to __Tools > Conflict Solvers__.
-            * Click __Add__.
-            * __File Pattern:__ *
-            * Select __External Conflict Solver__.
-            * __Command:__ C:\Program Files\Beyond Compare 4\bcomp.exe
-            * __Arguments:__ "${leftFile}" "${rightFile}" "${baseFile}" /mergeoutput="${mergedFile}"
+* Complete Individually
+   * SmartGit with Beyond Compare
+      * *Use your path for Beyond Compare if it differs from below.*
+      * Diff
+         * Select __Edit | Preferences__.
+         * Go to __Tools > Diff Tools__.
+         * Click __Add__.
+         * __File Pattern:__ *
+         * Select __External diff tool__.
+         * __Command:__ C:\Program Files\Beyond Compare 4\bcomp.exe
+         * __Arguments:__ /lefttitle="${leftTitle}" /righttitle="${rightTitle}" "${leftFile}" "${rightFile}"
+      * Merge
+         * Select __Edit | Preferences__.
+         * Go to __Tools > Conflict Solvers__.
+         * Click __Add__.
+         * __File Pattern:__ *
+         * Select __External Conflict Solver__.
+         * __Command:__ C:\Program Files\Beyond Compare 4\bcomp.exe
+         * __Arguments:__ "${leftFile}" "${rightFile}" "${baseFile}" /mergeoutput="${mergedFile}"
+* Complete with Group
+   * Command Line Setup
+       * Initial configuration required by new Git installation. We use the `--global' flag so settings are stored in C:\Users\profile\\.gitconfig. All repositories on your system will respect this configuration information. Quotes are not needed around paths with spaces but special characters in the path will require the full path wrapped in quotation marks.
+       * *Use your path for Beyond Compare if it differs from below.*
+           * git config user name  
+               `git config --global user.name yourname`  
+           * git config user email  
+               `git config --global user.email youremail`  
+           * git config difftool  
+               `git config --global diff.tool bc`  
+               `git config --global difftool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
+               `git config --global difftool.prompt false`  
+           * git config mergetool  
+               `git config --global merge.tool bc`  
+               `git config --global mergetool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
+           * git config editor (default editor is Vim so if you love Vim then disregard this command)   
+               `git config --global core.editor 'C:/Program Files/Sublime Text 3/subl.exe' -w`
+           * git configure merge to use no fast forward by default  
+               `git config --global merge.ff no`
+       * SSH keys
+           * Steps below lifted from https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key.
+               1. Open Git Bash.  
+               2. Paste the text below, substituting in your GitHub email address.  
+                  `ssh-keygen -t rsa -b 4096 -C "your_email@example.com"`  
+                  This creates a new ssh key, using the provided email as a label.  
+                  `Generating public/private rsa key pair.`  
+               3. When you're prompted to "Enter a file in which to save the key," press Enter. This accepts the default file location.  
+                `Enter a file in which to save the key (/Users/you/.ssh/id_rsa): [Press enter]`  
+               4. At the prompt, type a secure passphrase.  
+                   `Enter passphrase (empty for no passphrase): [Type a passphrase]`  
+                   `Enter same passphrase again: [Type passphrase again]`  
+           * Import contents of id_rsa.pub to Source Control Provider. **Keep id_rsa file private and safe!!**
 * GUI tool Setup
     * My personal opinion in this: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and SmartGit is my personal favorite GUI tool for Git. SmartGit is free for personal use and requires a paid license otherwise.
 
@@ -205,5 +203,11 @@ Git Evangelism @ Mortgage Cadence
         * Undo'ing changes to a file forces Git to show the file as not modified.
     * Files modified outside of Visual Studio do not display as modified.
         * Git tracks file changes by file content and not Read Only flags or other avenues.
+* Short list of Source Control Providers
+   * GitHub (https://github.com/)
+   * GitLab (https://about.gitlab.com/)
+   * Visual Studio Online (https://www.visualstudio.com/)
+   * BitBucket (https://bitbucket.org/)
+   * etc
 * Fun Links
    * https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf
