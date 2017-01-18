@@ -44,6 +44,7 @@ Git Evangelism @ Mortgage Cadence
    * Command Line Setup
        * Initial configuration required by new Git installation. We use the `--global' flag so settings are stored in C:\Users\profile\\.gitconfig. All repositories on your system will respect this configuration information. Quotes are not needed around paths with spaces but special characters in the path will require the full path wrapped in quotation marks.
        * *Use your path for Beyond Compare if it differs from below.*
+       * __Use Git Bash to enter these commands otherwise you risk syntax errors.__
            * git config user name  
                `git config --global user.name yourname`  
            * git config user email  
@@ -224,3 +225,4 @@ Git Evangelism @ Mortgage Cadence
    * Stack Overflow: How do I show the changes which have been staged?
       * http://stackoverflow.com/a/1587952/1444511
       * http://images.abizern.org.s3.amazonaws.com/365git/March10/GitDiffSimple.png
+   * https://help.github.com/articles/dealing-with-line-endings/
