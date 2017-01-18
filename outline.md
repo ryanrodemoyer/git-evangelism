@@ -221,3 +221,6 @@ Git Evangelism @ Mortgage Cadence
    * etc
 * Fun Links
    * https://www.atlassian.com/dms/wac/images/landing/git/atlassian_git_cheatsheet.pdf
+   * Stack Overflow: How do I show the changes which have been staged?
+      * http://stackoverflow.com/a/1587952/1444511
+      * http://images.abizern.org.s3.amazonaws.com/365git/March10/GitDiffSimple.png
