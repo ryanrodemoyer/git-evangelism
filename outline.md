@@ -107,6 +107,21 @@ Git Evangelism @ Mortgage Cadence
             `start git difftool <path/to/file>`
 * Commit History
    * `git log`
+* Stashes
+   * Use a `stash` when you need to save off local modifications to do something else (ex. apply changes to a different branch, work on something totally different, try a different idea, etc.).
+   * Creating a stash will take all changes from "Working Tree" (files that exist in repository and are modified) and "Index" (staged modifications) and save them to __your local repository__ and undo the local modifications.
+   * Stashes are not collaborative and not shareable.
+   * Create a stash  
+      `git stash`
+   * Restore changes from a stash:
+      * And delete the stash  
+         `git stash pop`
+      * And keep the stash  
+         `git stash apply`
+   * Display all stashes in repository  
+      `git stash list`
+   * Display meta information about all stashes in repository  
+      `git stash show`
 * Branches
    * Notes:
       * This is where the fun starts.
@@ -148,7 +163,6 @@ Git Evangelism @ Mortgage Cadence
 * Commits stack on branch with pull requests.
 * Unrelated commits belong on a different branch.
 * Bonuses
-    * stashes
     * cherry pick
 
 ## Merge and Rebase
