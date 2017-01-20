@@ -46,9 +46,9 @@ Git Evangelism @ Mortgage Cadence
        * *Use your path for Beyond Compare if it differs from below.*
        * __Use Git Bash to enter these commands otherwise you risk syntax errors.__
            * git config user name  
-               `git config --global user.name yourname`  
+               `git config --global user.name "Joe Dirt"`  
            * git config user email  
-               `git config --global user.email youremail`  
+               `git config --global user.email joedirt@mc.local`  
            * git config difftool  
                `git config --global diff.tool bc`  
                `git config --global difftool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
@@ -60,6 +60,10 @@ Git Evangelism @ Mortgage Cadence
                `git config --global core.editor 'C:/Program Files/Sublime Text 3/subl.exe' -w`
            * git configure merge to use no fast forward by default  
                `git config --global merge.ff no`
+           * git configure to not manipulate line endings  
+               `git config --global core.autocrlf false`
+           * git config view all config options for --global  
+               `git config --global --list`
 * GUI tool Setup
     * My personal opinion in this: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and SmartGit is my personal favorite GUI tool for Git. SmartGit is free for personal use and requires a paid license otherwise.
 
