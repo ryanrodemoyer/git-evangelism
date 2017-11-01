@@ -65,7 +65,7 @@ Git Evangelism @ Mortgage Cadence
            * git config view all config options for --global  
                `git config --global --list`
 * GUI tool Setup
-    * My personal opinion in this: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and SmartGit is my personal favorite GUI tool for Git. SmartGit is free for personal use and requires a paid license otherwise.
+    * My personal opinion: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and SmartGit is my personal favorite GUI tool for Git. SmartGit is free for personal use and requires a paid license otherwise.
 
 ## Using Git (locally)
 * Getting Started (local version)
