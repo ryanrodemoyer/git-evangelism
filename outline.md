@@ -7,10 +7,10 @@ Git Evangelism @ Mortgage Cadence
     * Software Installation:
       * Disclaimer: This is my recommendation software stack for working with Git and thus this is how I will present the tools I have found to be helpful and enable my success with Git. You are under no obligation to continue with these tools. Most likely there is a better combination I have yet to discover and in that case, please share you findings with me : )
       * Downloaded and/or installed software:
-         * Git (https://github.com/git-for-windows/git/releases/download/v2.11.0.windows.1/Git-2.11.0-64-bit.exe).
-         * Beyond Compare (http://www.scootersoftware.com/BCompare-4.1.9.21719.exe).
-         * Sublime Text (https://download.sublimetext.com/Sublime%20Text%20Build%203126%20x64%20Setup.exe).
-         * SmartGit (http://www.syntevo.com/smartgit/download?file=smartgit/smartgit-win32-setup-jre-8_0_3.zip).
+         * Git (https://github.com/git-for-windows/git/releases/download/v2.15.0.windows.1/Git-2.15.0-64-bit.exe).
+         * Beyond Compare (https://www.scootersoftware.com/BCompare-4.2.3.22587.exe).
+         * Sublime Text (https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe).
+         * SmartGit (http://www.syntevo.com/smartgit/download?file=smartgit/smartgit-win32-setup-jre-17_1_1.zip).
       * Instructions: Accept defaults unless you feel strongly about a different option or know something else that I do not know. In that case, please share with me : )
 * Survey
 * Brief history of Git
