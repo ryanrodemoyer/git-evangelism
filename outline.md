@@ -134,7 +134,7 @@ Git Evangelism @ Mortgage Cadence
       * Commit, undo or stash all changes in workspace.
       * Switch to parent branch.  
          `git checkout <parent-branch-name>`
-      * Merge child branch in to parent branch.  
+      * Merge child branch in to parent branch via force a merge-commit.  
          `git merge <child-branch-name> --no-ff`
    
 # Using Git (with SCP)
@@ -168,6 +168,16 @@ Git Evangelism @ Mortgage Cadence
 
 ## Branches and Pull Requests
 * Workflow of creating a branch and opening a pull request.
+   1. Create the branch in SCP via the UI.
+   1. Locally:
+      * Switch to the desired parent branch.  
+        `git checkout <branch>`
+      * Update the branch.  
+        `git pull <remote> <branch> --rebase`
+      * Pull the new branch.  
+        `git pull <origin> <new-branch>`
+      * Switch to the new branch.  
+        `git checkout -b <new-branch>`
 * Pushing and pulling
 * Collaborating on pull requests.
 * Commits stack on branch with pull requests.
@@ -177,10 +187,19 @@ Git Evangelism @ Mortgage Cadence
 
 ## Merge and Rebase
 * Merging branches up or down.
-   * fast forward or not fast forward. 
+   * *Merging up* implies moving changes from a child branch in to the parent branch.
+   * *Merging down* implies integrating changes from a parent branch in to the child branch.
+   * fast forward or not fast forward?
+      * Fast-forward relates to how the log will appear after a merge by either showing a merge commit or "moving" the changes from the child branch on to the log of the parent branch. A fast-forward merge is possible only when the parent branch has not diverged from the child branch when attempting the merge.
+   * 
 * Rebase
    * Rebase a feature branch.
+      * This implies that a child parent needs to incorporate changes from the parent branch. Rebase the feature branch if the commits on the branch are few/minimal. This is useful to keep the history clean.  
+        `git checkout <child-branch>`  
+        `git rebase <parent-branch>`
    * Pull and rebase.
+      * Developers should *pull and rebase* when updating their copy of a branch from the remote. This is required so that a merge commit is not created when merely updating a branch.  
+        `git pull <remote-name> <branch> --rebase`
 * Squashing
    * Purpose: to condense 2 or more commits in to a single logical commit containing the aggregate result of all changes from the targeted commits.
    * Benefit: provide a clean and concise log of changes when merging feature branches to upstreams. The developer can commit incrementally or as he/she sees best but then clean up the log before merging.
@@ -215,8 +234,15 @@ Git Evangelism @ Mortgage Cadence
 ## Fun: Cloud Deployments and Shortcuts
 * Deploying your code via Git to cloud providers like Heroku or Azure
 * Git Shortcuts
-    * command
+    * Config
+      * show all configured configs
+        `git config --list`
+    * Remote
+      * list all remotes in the repository
+        `git remote -v`
 * Git RefLog
+   * Find a reference to recently created/discarded commits. Useful if you happen to rebase away a commit and then find a need for it.  
+     `git reflog`
 
 ## Wrap Up
 * Random discussions or take-aways for follow up or simply so it is not lost.
