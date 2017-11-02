@@ -169,6 +169,8 @@ Git Evangelism @ Mortgage Cadence
 ## Branches and Pull Requests
 * Workflow of creating a branch and opening a pull request.
    1. Create the branch in SCP via the UI.
+      * Switch to the desired branch from where you want to base the upcoming changes.
+      * Create the branch.
    1. Locally:
       * Switch to the desired parent branch.  
         `git checkout <branch>`
@@ -178,7 +180,15 @@ Git Evangelism @ Mortgage Cadence
         `git pull <origin> <new-branch>`
       * Switch to the new branch.  
         `git checkout -b <new-branch>`
+      * Commit one or more times to `<new-branch>`.
+      * Send local copy of branch to the server.  
+        `git push <remote> <new-branch>`
+    1. In SCP, open a *pull request* to merge `<new-branch>` in to `<parent-branch>`.
 * Pushing and pulling
+   * *Push*: Send the local copy of the branch to the remote.  
+     `git push <remote> <branch>`
+   * *Pull*: Retrieve the remote branch and update the local copy.  
+     `git pull <remote> <branch> --rebase`
 * Collaborating on pull requests.
 * Commits stack on branch with pull requests.
 * Unrelated commits belong on a different branch.
