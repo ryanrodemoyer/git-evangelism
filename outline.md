@@ -182,9 +182,20 @@ Git Evangelism @ Mortgage Cadence
    * Rebase a feature branch.
    * Pull and rebase.
 * Squashing
-   * soft reset
-   * hard reset
-   * interactive rebase
+   * Purpose: to condense 2 or more commits in to a single logical commit containing the aggregate result of all changes from the targeted commits.
+   * Benefit: provide a clean and concise log of changes when merging feature branches to upstreams. The developer can commit incrementally or as he/she sees best but then clean up the log before merging.
+   * Methods
+      * soft reset
+         * "undo" the last N number of commits and move the changes to the index (ie. staged).
+         * Undo the single most recent commit   
+          `git reset --soft HEAD~1`
+      * hard reset
+         * "undo" the last N number of commits **and discard the contents**.
+         * Undo the single most recent commit.  
+           `git reset --hard HEAD~1`
+      * interactive rebase
+         * Powerful mechanism to squash, reorder and ammend commits that exist on a specific branch.  
+           `git rebase -i`
 * When to use which
    * `merge` when integrating from a child branch to the parent branch.
       * Almost all merge activities should occur in SCP via pull requests. Try to avoid `merge` commands in your local repository unless it's absolutely required.
@@ -194,7 +205,7 @@ Git Evangelism @ Mortgage Cadence
          * Switch to parent branch and `git pull --rebase <remote-name> <branch-name>`.
          * Switch to feature branch and `git rebase <branch-name>` or to clean up local commits `git rebase -i <branch-name>`.
       * Notes
-         * `rebase` keeps history clean and readable and avoids merge commits (merge commits are noise in feature branches)
+         * `rebase` keeps history clean and readable and minimizes merge commits (merge commits are noise in feature branches)
          * `rebase` is rewriting history - BE CAREFUL IF YOU'VE ALREADY PUSHED YOUR BRANCH TO THE REMOTE!
 
 ## Issues Management
