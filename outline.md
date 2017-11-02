@@ -44,6 +44,8 @@ Git Evangelism @ Mortgage Cadence
    * Command Line Setup
        * Initial configuration required by new Git installation. We use the `--global' flag so settings are stored in C:\Users\profile\\.gitconfig. All repositories on your system will respect this configuration information. Quotes are not needed around paths with spaces but special characters in the path will require the full path wrapped in quotation marks.
        * *Use your path for Beyond Compare if it differs from below.*
+       * Alternative typing these manually is to use the `config.sh` script in the repo and execute in Git Bash.  
+         `bash config.sh`
        * __Use Git Bash to enter these commands otherwise you risk syntax errors.__
            * git config user name  
                `git config --global user.name "Joe Dirt"`  
@@ -57,7 +59,7 @@ Git Evangelism @ Mortgage Cadence
                `git config --global merge.tool bc`  
                `git config --global mergetool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
            * git config editor (default editor is Vim so if you love Vim then disregard this command)   
-               `git config --global core.editor 'C:/Program Files/Sublime Text 3/subl.exe' -w`
+               `git config --global core.editor "'C:/Program Files/Sublime Text 3/subl.exe' -w"`
            * git configure merge to use no fast forward by default  
                `git config --global merge.ff no`
            * git configure to not manipulate line endings  
