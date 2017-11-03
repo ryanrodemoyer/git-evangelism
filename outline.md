@@ -50,7 +50,7 @@ Git Evangelism @ Mortgage Cadence
            * git config user name  
                `git config --global user.name "Joe Dirt"`  
            * git config user email  
-               `git config --global user.email joedirt@mc.local`  
+               `git config --global user.email joedirt@thedirtfamily.com`  
            * git config difftool  
                `git config --global diff.tool bc`  
                `git config --global difftool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
