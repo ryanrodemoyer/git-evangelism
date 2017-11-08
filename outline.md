@@ -309,5 +309,6 @@ Git Evangelism @ Mortgage Cadence
    * Stack Overflow: How do I show the changes which have been staged?
       * http://stackoverflow.com/a/1587952/1444511
       * http://images.abizern.org.s3.amazonaws.com/365git/March10/GitDiffSimple.png
+   * https://stackoverflow.com/questions/8481488/is-git-not-case-sensitive
    * https://help.github.com/articles/dealing-with-line-endings/
    * https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
