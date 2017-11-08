@@ -109,15 +109,24 @@ Git Evangelism @ Mortgage Cadence
    * Use a `stash` when you need to save off local modifications to do something else (ex. apply changes to a different branch, work on something totally different, try a different idea, etc.).
    * Creating a stash will take all changes from "Working Tree" (files that exist in repository and are modified) and "Index" (staged modifications) and save them to __your local repository__ and undo the local modifications.
    * Stashes are not collaborative and not shareable.
-   * Create a stash  
-      `git stash`
-   * Restore changes from a stash:
+   * Create a stash
+      * And use the default message  
+        `git stash`
+      * And provide a description  
+        `git stash save "<message>"`
+      * Use the `--keepindex` flag to preserve changes after a stash is made
+   * Restore changes from the most recent stash:
       * And delete the stash  
          `git stash pop`
       * And keep the stash  
          `git stash apply`
    * Display all stashes in repository  
       `git stash list`
+   * Restore a specific stash where *n* is the stash number from `git stash list`
+        * And delete the stash  
+         `git stash pop stash@{n}`
+        * And keep the stash  
+         `git stash apply stash@{n}`
    * Display meta information about all stashes in repository  
       `git stash show`
 * Branches
