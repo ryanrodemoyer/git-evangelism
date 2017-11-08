@@ -267,6 +267,8 @@ Git Evangelism @ Mortgage Cadence
 
 ## Wrap Up
 * Random discussions or take-aways for follow up or simply so it is not lost.
+* Is Git case-sensitive?
+   * The answer is, it depends. Depends on what you're doing. Filesystem related commands are case-insensitive on Windows as the Windows file system is case-insensitive. But referring to specific objects in Git (ex. branch name) can be case-sensitive. Goofy things can happen if you mix or do not respect letter casing. The recommendation is to always respect casing when using Git.
 
 ## Appendix
 * TFS Painpoints
