@@ -148,7 +148,6 @@ Git Evangelism @ Mortgage Cadence
       * Merge child branch in to parent branch via force a merge-commit.  
          `git merge <child-branch-name> --no-ff`
 
-
 ## Merge and Rebase
 * Merging branches up or down.
    * *Merging up* implies moving changes from a child branch in to the parent branch.
@@ -245,8 +244,6 @@ Git Evangelism @ Mortgage Cadence
 * Collaborating on pull requests.
 * Commits stack on branch with pull requests.
 * Unrelated commits belong on a different branch.
-* Bonuses
-    * cherry pick
 
 ## Issues Management
 * Create issues in Source Control Provider.
@@ -264,6 +261,14 @@ Git Evangelism @ Mortgage Cadence
 * Git RefLog
    * Find a reference to recently created/discarded commits. Useful if you happen to rebase away a commit and then find a need for it.  
      `git reflog`
+* Cherry picking
+   * Arbitrarily copy one or more commits from the repository to the tip of the current branch.
+      * Apply the most recent commit from a branch to the current branch.  
+         `git cherry-pick -x <branch-name> [...]`  
+         `git cherry-pick -x <hash> [...]`
+      * Apply the fifth and third most recent commits from <branch-name> to the current branch.  
+         `git cherry-pick -x <branch-name>~4 <branch-name>~2`
+      * Use the `--no-commit` flag to stage the changes instead of commit.
 
 ## Wrap Up
 * Random discussions or take-aways for follow up or simply so it is not lost.
