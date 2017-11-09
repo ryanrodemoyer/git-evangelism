@@ -194,7 +194,7 @@ Git Evangelism @ Mortgage Cadence
 * Why do I need SCP?
    * Serve as a backup.
    * Project management tools.
-   * __Enable collaboration__.
+   * __Foster collaboration__.
 * Getting Started
    * Initial Setup for SSH keys (recommended, not required) 
       * Steps below lifted from https://help.github.com/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent/#generating-a-new-ssh-key.
