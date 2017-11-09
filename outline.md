@@ -147,6 +147,48 @@ Git Evangelism @ Mortgage Cadence
          `git checkout <parent-branch-name>`
       * Merge child branch in to parent branch via force a merge-commit.  
          `git merge <child-branch-name> --no-ff`
+
+
+## Merge and Rebase
+* Merging branches up or down.
+   * *Merging up* implies moving changes from a child branch in to the parent branch.
+   * *Merging down* implies integrating changes from a parent branch in to the child branch.
+   * fast forward or not fast forward?
+      * Fast-forward relates to how the log will appear after a merge by either showing a merge commit or "moving" the changes from the child branch on to the log of the parent branch. A fast-forward merge is possible only when the parent branch has not diverged from the child branch when attempting the merge.
+* Rebase
+   * Rebase a feature branch.
+      * This implies that a child parent needs to incorporate changes from the parent branch. Rebase the feature branch if the commits on the branch are few/minimal. This is useful to keep the history clean.  
+        `git checkout <child-branch>`  
+        `git rebase <parent-branch>`
+   * Pull and rebase.
+      * Developers should *pull and rebase* when updating their copy of a branch from the remote. This is required so that a merge commit is not created when merely updating a branch.  
+        `git pull <remote-name> <branch> --rebase`
+* When to use which
+   * `merge` when integrating from a child branch to the parent branch.
+      * Almost all merge activities should occur in SCP via pull requests. Try to avoid `merge` commands in your local repository unless it's absolutely required.
+   * `rebase` when intergrating from the parent branch to the child branch.
+      * `git pull --rebase` if working on a shared branch
+      * If working on a feature branch:
+         * Switch to parent branch and `git pull --rebase <remote-name> <branch-name>`.
+         * Switch to feature branch and `git rebase <branch-name>` or to clean up local commits `git rebase -i <branch-name>`.
+      * Notes
+         * `rebase` keeps history clean and readable and minimizes merge commits (merge commits are noise in feature branches)
+         * `rebase` is rewriting history - BE CAREFUL IF YOU'VE ALREADY PUSHED YOUR BRANCH TO THE REMOTE!
+* Squashing
+   * Purpose: to condense 2 or more commits in to a single logical commit containing the aggregate result of all changes from the targeted commits.
+   * Benefit: provide a clean and concise log of changes when merging feature branches to upstreams. The developer can commit incrementally or as he/she sees best but then clean up the log before merging.
+   * Methods
+      * soft reset
+         * "undo" the last N number of commits and move the changes to the index (ie. staged).
+         * Undo the single most recent commit   
+          `git reset --soft HEAD~1`
+      * hard reset
+         * "undo" the last N number of commits **and discard the contents**.
+         * Undo the single most recent commit.  
+           `git reset --hard HEAD~1`
+      * interactive rebase
+         * Powerful mechanism to squash, reorder and ammend commits that exist on a specific branch.  
+           `git rebase -i`
    
 # Using Git (with SCP)
 * Why do I need SCP?
@@ -205,48 +247,6 @@ Git Evangelism @ Mortgage Cadence
 * Unrelated commits belong on a different branch.
 * Bonuses
     * cherry pick
-
-## Merge and Rebase
-* Merging branches up or down.
-   * *Merging up* implies moving changes from a child branch in to the parent branch.
-   * *Merging down* implies integrating changes from a parent branch in to the child branch.
-   * fast forward or not fast forward?
-      * Fast-forward relates to how the log will appear after a merge by either showing a merge commit or "moving" the changes from the child branch on to the log of the parent branch. A fast-forward merge is possible only when the parent branch has not diverged from the child branch when attempting the merge.
-   * 
-* Rebase
-   * Rebase a feature branch.
-      * This implies that a child parent needs to incorporate changes from the parent branch. Rebase the feature branch if the commits on the branch are few/minimal. This is useful to keep the history clean.  
-        `git checkout <child-branch>`  
-        `git rebase <parent-branch>`
-   * Pull and rebase.
-      * Developers should *pull and rebase* when updating their copy of a branch from the remote. This is required so that a merge commit is not created when merely updating a branch.  
-        `git pull <remote-name> <branch> --rebase`
-* Squashing
-   * Purpose: to condense 2 or more commits in to a single logical commit containing the aggregate result of all changes from the targeted commits.
-   * Benefit: provide a clean and concise log of changes when merging feature branches to upstreams. The developer can commit incrementally or as he/she sees best but then clean up the log before merging.
-   * Methods
-      * soft reset
-         * "undo" the last N number of commits and move the changes to the index (ie. staged).
-         * Undo the single most recent commit   
-          `git reset --soft HEAD~1`
-      * hard reset
-         * "undo" the last N number of commits **and discard the contents**.
-         * Undo the single most recent commit.  
-           `git reset --hard HEAD~1`
-      * interactive rebase
-         * Powerful mechanism to squash, reorder and ammend commits that exist on a specific branch.  
-           `git rebase -i`
-* When to use which
-   * `merge` when integrating from a child branch to the parent branch.
-      * Almost all merge activities should occur in SCP via pull requests. Try to avoid `merge` commands in your local repository unless it's absolutely required.
-   * `rebase` when intergrating from the parent branch to the child branch.
-      * `git pull --rebase` if working on a shared branch
-      * If working on a feature branch:
-         * Switch to parent branch and `git pull --rebase <remote-name> <branch-name>`.
-         * Switch to feature branch and `git rebase <branch-name>` or to clean up local commits `git rebase -i <branch-name>`.
-      * Notes
-         * `rebase` keeps history clean and readable and minimizes merge commits (merge commits are noise in feature branches)
-         * `rebase` is rewriting history - BE CAREFUL IF YOU'VE ALREADY PUSHED YOUR BRANCH TO THE REMOTE!
 
 ## Issues Management
 * Create issues in Source Control Provider.
