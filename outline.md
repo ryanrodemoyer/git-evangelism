@@ -251,6 +251,12 @@ Git Evangelism @ Mortgage Cadence
 
 ## Fun: Cloud Deployments and Shortcuts
 * Deploying your code via Git to cloud providers like Heroku or Azure
+* Git Ignore
+   * force your entire repository to respect the .gitignore file (meaning files were committed before added to .gitignore)  
+      __BE SAFE AND DO THIS IN A SEPARATE BRANCH THEN MERGE__  
+      `git rm -r --cached .`  
+      `git add .`  
+      `git commit -m "<message>"`
 * Git Shortcuts
     * Config
       * show all configured configs
@@ -258,6 +264,11 @@ Git Evangelism @ Mortgage Cadence
     * Remote
       * list all remotes in the repository
         `git remote -v`
+    * Log
+      * show pretty print graph of commits in your repository  
+         `git log --decorate --oneline --graph`
+      * show pretty print graph of commits __and stashes__ in your repository  
+         `git log --decorate --oneline --graph --all`
 * Git RefLog
    * Find a reference to recently created/discarded commits. Useful if you happen to rebase away a commit and then find a need for it.  
      `git reflog`
@@ -269,11 +280,16 @@ Git Evangelism @ Mortgage Cadence
       * Apply the fifth and third most recent commits from <branch-name> to the current branch.  
          `git cherry-pick -x <branch-name>~4 <branch-name>~2`
       * Use the `--no-commit` flag to stage the changes instead of commit.
+* Command aliases
+   * Git allows you to store command shortcuts in your .gitconfig file to essentially function as shortcuts that you can use in Git Bash.
+      * `git config --global alias.adlog "log --all --decorate --oneline --graph"`
 
 ## Wrap Up
 * Random discussions or take-aways for follow up or simply so it is not lost.
 * Is Git case-sensitive?
    * The answer is, it depends. Depends on what you're doing. Filesystem related commands are case-insensitive on Windows as the Windows file system is case-insensitive. But referring to specific objects in Git (ex. branch name) can be case-sensitive. Goofy things can happen if you mix or do not respect letter casing. The recommendation is to always respect casing when using Git.
+* Git shows me a file is modified but that file should be ignored via .gitignore. What the heck?
+   * The file already exists in the repository and was added before .gitignore said to ignore. You'll need to manually remove that file from the repository and commit the removal.
 
 ## Appendix
 * TFS Painpoints
