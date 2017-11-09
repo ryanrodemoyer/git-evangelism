@@ -282,7 +282,7 @@ Git Evangelism @ Mortgage Cadence
       * Use the `--no-commit` flag to stage the changes instead of commit.
 * Command aliases
    * Git allows you to store command shortcuts in your .gitconfig file to essentially function as shortcuts that you can use in Git Bash.
-      * `git config --global alias.adlog "log --all --decorate --oneline --graph"`
+      * `git config --global alias.adlog "log --all --decorate --oneline --graph"` then use it in Git Bash like `git adlog`
 
 ## Wrap Up
 * Random discussions or take-aways for follow up or simply so it is not lost.
