@@ -84,8 +84,10 @@ Git Evangelism @ Mortgage Cadence
    * Create by issuing the following command in root of repository (same location as the .git folder).  
       `touch .gitignore`
    * https://www.gitignore.io/ is a tool that will provide fully generated .gitignore files for virtually any language/toolset in use today. For .NET development, search "VisualStudio" or "VisualStudioCode".
-      * https://www.gitignore.io/api/visualstudio
-      * https://www.gitignore.io/api/visualstudiocode
+      * https://www.gitignore.io/api/visualstudio  
+        `curl https://www.gitignore.com/api/visualstudio --output .gitignore`
+      * https://www.gitignore.io/api/visualstudiocode  
+        `curl https://www.gitignore.com/api/visualstudiocode --output .gitignore`
 * Current State of Repository
    * `git status`
 * diffs and commits
@@ -207,7 +209,8 @@ Git Evangelism @ Mortgage Cadence
          4. At the prompt, type a secure passphrase.  
              `Enter passphrase (empty for no passphrase): [Type a passphrase]`  
              `Enter same passphrase again: [Type passphrase again]`  
-      * Import contents of id_rsa.pub to Source Control Provider. **Keep id_rsa file private and safe!!**
+      * Import contents of id_rsa.pub to Source Control Provider. **Keep id_rsa file private and safe!!**  
+        `cat ~/.ssh/id_rsa.pub | clip` to copy public ssh key to clipboard.
    * Get To Work
       * Create project in Source Control Provider.
          * Clone locally.  
