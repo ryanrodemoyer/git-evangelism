@@ -117,6 +117,7 @@ Git Evangelism @ Mortgage Cadence
       * And provide a description  
         `git stash save "<message>"`
       * Use the `--keepindex` flag to preserve changes after a stash is made
+      * Use the `-u` flag to include untracked changes in the stash
    * Restore changes from the most recent stash:
       * And delete the stash  
          `git stash pop`
