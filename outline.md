@@ -11,6 +11,7 @@ Git Evangelism @ Mortgage Cadence
          * Beyond Compare (https://www.scootersoftware.com/BCompare-4.2.3.22587.exe).
          * Sublime Text (https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe).
          * Sourcetree (https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.3.5.0.exe).
+         * Git LFS (https://github.com/git-lfs/git-lfs/releases/download/v2.3.4/git-lfs-windows-2.3.4.exe).
       * Instructions: Accept defaults unless you feel strongly about a different option or know something else that I do not know. In that case, please share with me : )
 * Survey
 * Brief history of Git
@@ -33,6 +34,8 @@ Git Evangelism @ Mortgage Cadence
        * An alternative to typing these manually is to use the `config.<platform>.sh` script in the repo and execute in Git Bash.  
          `bash config.sh`
        * __Use Git Bash to enter these commands otherwise you risk syntax errors.__
+           * git large file storage  
+               `git lfs install`
            * git config user name  
                `git config --global user.name "Joe Dirt"`  
            * git config user email  
