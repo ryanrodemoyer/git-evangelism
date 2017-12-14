@@ -10,7 +10,7 @@ Git Evangelism @ Mortgage Cadence
          * Git (https://github.com/git-for-windows/git/releases/download/v2.15.0.windows.1/Git-2.15.0-64-bit.exe).
          * Beyond Compare (https://www.scootersoftware.com/BCompare-4.2.3.22587.exe).
          * Sublime Text (https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe).
-         * SmartGit (http://www.syntevo.com/smartgit/download?file=smartgit/smartgit-win32-setup-jre-17_1_1.zip).
+         * Sourcetree (https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.3.5.0.exe)..
       * Instructions: Accept defaults unless you feel strongly about a different option or know something else that I do not know. In that case, please share with me : )
 * Survey
 * Brief history of Git
@@ -22,24 +22,10 @@ Git Evangelism @ Mortgage Cadence
     
 ## Initial Configuration
 * Complete Individually
-   * SmartGit with Beyond Compare
-      * *Use your path for Beyond Compare if it differs from below.*
-      * Diff
-         * Select __Edit | Preferences__.
-         * Go to __Tools > Diff Tools__.
-         * Click __Add__.
-         * __File Pattern:__ *
-         * Select __External diff tool__.
-         * __Command:__ C:\Program Files\Beyond Compare 4\bcomp.exe
-         * __Arguments:__ /lefttitle="${leftTitle}" /righttitle="${rightTitle}" "${leftFile}" "${rightFile}"
-      * Merge
-         * Select __Edit | Preferences__.
-         * Go to __Tools > Conflict Solvers__.
-         * Click __Add__.
-         * __File Pattern:__ *
-         * Select __External Conflict Solver__.
-         * __Command:__ C:\Program Files\Beyond Compare 4\bcomp.exe
-         * __Arguments:__ "${leftFile}" "${rightFile}" "${baseFile}" /mergeoutput="${mergedFile}"
+   * Sourcetree with Beyond Compare
+      * Select __Tools | Options__.
+      * Go to the __Diff tab__
+         * Choose 'Beyond Compare' for External Diff Tool and Merge Tool.
 * Complete with Group
    * Command Line Setup
        * Initial configuration required by new Git installation. We use the `--global' flag so settings are stored in C:\Users\profile\\.gitconfig. All repositories on your system will respect this configuration information. Quotes are not needed around paths with spaces but special characters in the path will require the full path wrapped in quotation marks.
@@ -72,7 +58,7 @@ Git Evangelism @ Mortgage Cadence
            * git config default pull strategy to be fast-forward  
                `git config --global pull.ff only`
 * GUI tool Setup
-    * My personal opinion: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and SmartGit is my personal favorite GUI tool for Git. SmartGit is free for personal use and requires a paid license otherwise.
+    * My personal opinion: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and Sourcetree is my personal favorite GUI tool for Git. Sourcetree is free.
 
 ## Using Git (locally)
 * Getting Started (local version)
