@@ -10,7 +10,7 @@ Git Evangelism @ Mortgage Cadence
          * Git (https://github.com/git-for-windows/git/releases/download/v2.15.0.windows.1/Git-2.15.0-64-bit.exe).
          * Beyond Compare (https://www.scootersoftware.com/BCompare-4.2.3.22587.exe).
          * Sublime Text (https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe).
-         * Sourcetree (https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.3.5.0.exe)..
+         * Sourcetree (https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.3.5.0.exe).
       * Instructions: Accept defaults unless you feel strongly about a different option or know something else that I do not know. In that case, please share with me : )
 * Survey
 * Brief history of Git
