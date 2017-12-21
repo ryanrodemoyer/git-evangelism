@@ -1,6 +1,7 @@
 # run in Git Bash via "bash config.sh"
 
 git lfs install
+git config --global credential.helper manager
 git config --global diff.tool bc
 git config --global difftool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"
 git config --global difftool.prompt false

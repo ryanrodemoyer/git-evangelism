@@ -18,6 +18,8 @@ Git Evangelism @ Mortgage Cadence
     * Creator
     * Why Git was created
     * Revolutionized open source
+* Entering credentials to TFS
+    * When communicating with TFS and you're prompted for credentials, you **must** enter your credentails as DOMAIN\username. Otherwise you'll need to update/remove the entery that is created in (Windows) *Credential Manager*.
 * TFS Painpoints (mine)
     * see bottom of doc
     
@@ -36,6 +38,8 @@ Git Evangelism @ Mortgage Cadence
        * __Use Git Bash to enter these commands otherwise you risk syntax errors.__
            * git large file storage  
                `git lfs install`
+           * git config credential helper  
+               `git config --global credential.helper manager`
            * git config user name  
                `git config --global user.name "Joe Dirt"`  
            * git config user email  
