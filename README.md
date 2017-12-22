@@ -1,6 +1,10 @@
 Git Evangelism @ Mortgage Cadence
 =================================
 
+## Contents
+1. [Introduction](#introduction)
+1. [Branches and Pull Requests](#branches-and-pull-requests)
+
 ## Introduction
 * Prequisites
     * Git experience: none.
@@ -233,8 +237,7 @@ Git Evangelism @ Mortgage Cadence
 ## Branches and Pull Requests
 * Workflow of creating a branch and opening a pull request.
    1. Create the branch in SCP via the UI.
-      * Switch to the desired branch from where you want to base the upcoming changes.
-      * Create the branch.
+      * Ensure the correct base/parent branch is used when creating in SCP.
    1. Locally:
       * Switch to the desired parent branch.  
         `git checkout <branch>`
