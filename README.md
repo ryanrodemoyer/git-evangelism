@@ -152,6 +152,7 @@ Git Evangelism @ Mortgage Cadence
          `git checkout -b <branch-name>`
    * Start working on your feature and/or specific set of related changes. Commit. Commit. Commit.
    * When you're ready to merge changes with the parent branch:
+      * Note: this scenario applies only when working locally. Merges occur in the Source Control Provider tool when colloborating in a team environment.
       * Commit, undo or stash all changes in workspace.
       * Switch to parent branch.  
          `git checkout <parent-branch-name>`
