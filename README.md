@@ -130,6 +130,8 @@ Git Evangelism @ Mortgage Cadence
       * This is where the fun starts.
       * Branches are lightweight and quick and easy to create.
    * First set of commands for branches.
+      * List all branches that exist in the repository (local and remote)  
+         `git branch --all`
       * Create a new branch and do nothing else.  
          `git branch <branch-name>`
       * Switch to a different branch.  
