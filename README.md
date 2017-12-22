@@ -100,7 +100,7 @@ Git Evangelism @ Mortgage Cadence
         `curl https://www.gitignore.com/api/visualstudiocode --output .gitignore`
 * Current State of Repository
    * `git status`
-* diffs and commits
+* Commits and Diffs
     * two stage commits  
         `git add .` to Stage everything that is modified or `git add <filename>` to Stage specific files  
         `git commit` to open text editor for commit message or `git commit -m <message>`
@@ -116,7 +116,12 @@ Git Evangelism @ Mortgage Cadence
         * preface any of the above `diff` commands with `start` to prevent the command prompt from blocking
             `start git difftool <path/to/file>`
 * Commit History
-   * `git log`
+   * Git provides the log to see the history of commits from your current branch to the beginning of time in the repository. Commit history shows the most recent commits including information about the author, message and commit hash. 
+    * show the standard view for history  
+        `git log`
+    * show pretty print graph of commits in your repository  
+        `git log --decorate --oneline --graph`
+    * press `q` to exit the log or press `enter` to continue scrolling
 * Stashes
    * Use a `stash` when you need to save off local modifications to do something else (ex. apply changes to a different branch, work on something totally different, try a different idea, etc.).
    * Creating a stash will take all changes from "Working Tree" (files that exist in repository and are modified) and "Index" (staged modifications) and save them to __your local repository__ and undo the local modifications.
@@ -281,11 +286,14 @@ Git Evangelism @ Mortgage Cadence
       `git commit -m "<message>"`
 * Git Shortcuts
     * Config
-      * show all configured configs
+      * show all configured configs  
         `git config --list`
     * Remote
-      * list all remotes in the repository
+      * list all remotes in the repository  
         `git remote -v`
+    * Branches
+      * list all branches in the repository
+        `git branch -a`
     * Log
       * show pretty print graph of commits in your repository  
          `git log --decorate --oneline --graph`
@@ -356,3 +364,4 @@ Git Evangelism @ Mortgage Cadence
    * https://stackoverflow.com/questions/29914052/i-cant-understand-the-behaviour-of-git-rebase-onto
    * https://help.github.com/articles/dealing-with-line-endings/
    * https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
+   * https://github.com/k88hudson/git-flight-rules
