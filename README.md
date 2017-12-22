@@ -68,10 +68,17 @@ Git Evangelism @ Mortgage Cadence
     * My personal opinion: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and Sourcetree is my personal favorite GUI tool for Git. Sourcetree is free.
 
 ## Using Git (locally)
-* Getting Started (local version)
+* Getting Started
     * Create local repository.
-        * Start with new folder or add existing project.  
+        * Start with new folder or use an existing project.  
             `git init`
+* Git Command Help
+   * Git provides a local web-based documentation system to get more info on the commands.  
+      `git help <command-name>`
+      * Examples
+         * `git help branch`  
+         * `git help push`
+         * `git help pull`
 * .gitignore
    * Define patterns for files/folders/paths and Git will ignore any matching files **not** already added to the repository.
    * Create by issuing the following command in root of repository (same location as the .git folder).  
