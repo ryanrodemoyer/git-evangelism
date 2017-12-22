@@ -263,14 +263,18 @@ Git Evangelism @ Mortgage Cadence
         `git push <remote> <new-branch>`
    1. In SCP, open a *pull request* to merge `<new-branch>` in to `<parent-branch>`.
       * If SCP offers an auto-squash feature when closing a pull request, **USE IT!!**
+      * Commits stack on branch with pull requests. Add more commits and they appear automagically on your pull request.
+      * Unrelated commits belong on a different branch.
+      * Collaborating on pull requests by reviewing the charges and adding your comments.
 * Pushing and pulling
    * *Push*: Send the local copy of the branch to the remote.  
      `git push <remote> <branch>`
    * *Pull*: Retrieve the remote branch and update the local copy.  
      `git pull <remote> <branch> --rebase`
-* Collaborating on pull requests.
-* Commits stack on branch with pull requests.
-* Unrelated commits belong on a different branch.
+* Why do we first create our branches in SCP?
+    * There are two main reasons that are advantageous for us to create branches in SCP:
+        1.	Our branches are then always created at the tip of the parent branch (this is just a fancy term in Git for the most recent commit on a branch). In turn, this keeps us in the habit of always updating our local repository with the commits from the remote.
+        1.	Provide visibility to our development organization on the state of what is currently getting worked on and where it is happening. Simply looking at the branches view in TFS allows any member of the dev group to look at the currently in-progress work. That’s a huge advantage to appreciating and understanding our effort and contributions.
 
 ## Issues Management
 * Create issues in Source Control Provider.
