@@ -3,7 +3,13 @@ Git Evangelism @ Mortgage Cadence
 
 ## Contents
 1. [Introduction](#introduction)
+1. [Initial Configuration](#initial-configuration)
+1. [Using Git Locally](#using-git-locally)
+1. [Merge and Rebase](#merge-and-rebase)
+1. [Using Git With SCP](#using-git-with-scp)
 1. [Branches and Pull Requests](#branches-and-pull-requests)
+1. [Wrapup](#wrap-up)
+1. [Appendix](#appendix)
 
 ## Introduction
 * Prequisites
@@ -71,7 +77,7 @@ Git Evangelism @ Mortgage Cadence
 * GUI tool Setup
     * My personal opinion: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and Sourcetree is my personal favorite GUI tool for Git. Sourcetree is free.
 
-## Using Git (locally)
+## Using Git Locally
 * Getting Started
     * Create local repository.
         * Start with new folder or use an existing project.  
@@ -204,7 +210,7 @@ Git Evangelism @ Mortgage Cadence
          * Powerful mechanism to squash, reorder and ammend commits that exist on a specific branch.  
            `git rebase -i`
    
-# Using Git (with SCP)
+## Using Git With SCP
 * Why do I need SCP?
    * Serve as a backup.
    * Project management tools.
