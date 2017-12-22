@@ -109,8 +109,8 @@ Git Evangelism @ Mortgage Cadence
         `git stash`
       * And provide a description  
         `git stash save "<message>"`
-      * Use the `--keepindex` flag to preserve changes after a stash is made
-      * Use the `-u` flag to include untracked changes in the stash
+      * Use the `-k | --keep-index` flag to preserve changes after a stash is made
+      * Use the `-u | --include-untracked` flag to include untracked changes in the stash
    * Restore changes from the most recent stash:
       * And delete the stash  
          `git stash pop`
@@ -125,6 +125,11 @@ Git Evangelism @ Mortgage Cadence
          `git stash apply stash@{n}`
    * Display meta information about all stashes in repository  
       `git stash show`
+   * Delete a stash
+      * The most recently created stash  
+         `git stash drop`
+      * A specific stash where *n* is the stash number from `git stash list`  
+         `git stash drop stash@{n}`
 * Branches
    * Notes:
       * This is where the fun starts.
