@@ -247,7 +247,8 @@ Git Evangelism @ Mortgage Cadence
       * Commit one or more times to `<new-branch>`.
       * Send local copy of branch to the server.  
         `git push <remote> <new-branch>`
-    1. In SCP, open a *pull request* to merge `<new-branch>` in to `<parent-branch>`.
+   1. In SCP, open a *pull request* to merge `<new-branch>` in to `<parent-branch>`.
+      * If SCP offers an auto-squash feature when closing a pull request, **USE IT!!**
 * Pushing and pulling
    * *Push*: Send the local copy of the branch to the remote.  
      `git push <remote> <branch>`
