@@ -369,3 +369,4 @@ Git Evangelism @ Mortgage Cadence
    * https://help.github.com/articles/dealing-with-line-endings/
    * https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration
    * https://github.com/k88hudson/git-flight-rules
+   * https://stackoverflow.com/questions/2304087/what-is-head-in-git
