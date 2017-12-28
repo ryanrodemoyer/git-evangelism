@@ -8,6 +8,7 @@ Git Evangelism @ Mortgage Cadence
 1. [Merge and Rebase](#merge-and-rebase)
 1. [Using Git With SCP](#using-git-with-scp)
 1. [Branches and Pull Requests](#branches-and-pull-requests)
+1. [Useful But Uncommon](#useful-but-uncommon)
 1. [Wrapup](#wrap-up)
 1. [Appendix](#appendix)
 
@@ -274,14 +275,9 @@ Git Evangelism @ Mortgage Cadence
    * *Pull*: Retrieve the remote branch and update the local copy.  
      `git pull <remote> <branch> --rebase`
 
-## Issues Management
-* Create issues in Source Control Provider.
-* Link commits to issues.
-
-## Fun: Cloud Deployments and Shortcuts
-* Deploying your code via Git to cloud providers like Heroku or Azure
+## Useful But Uncommon
 * Git Ignore
-   * force your entire repository to respect the .gitignore file (meaning files were committed before added to .gitignore)  
+   * force your entire repository to respect the .gitignore file (meaning files were committed before the exclusion existed in .gitignore)  
       __BE SAFE AND DO THIS IN A SEPARATE BRANCH THEN MERGE__  
       `git rm -r --cached .`  
       `git add .`  
