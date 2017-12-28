@@ -244,6 +244,10 @@ Git Evangelism @ Mortgage Cadence
             `git remote add <name> <url>`
 
 ## Branches and Pull Requests
+* Why do we first create our branches in SCP?
+    * There are two main reasons that are advantageous for us to create branches in SCP:
+        1.	Our branches are then always created at the tip of the parent branch (this is just a fancy term in Git for the most recent commit on a branch). In turn, this keeps us in the habit of always updating our local repository with the commits from the remote.
+        1.	Provide visibility to our development organization on the state of what is currently getting worked on and where it is happening. Simply looking at the branches view in TFS allows any member of the dev group to look at the currently in-progress work. That’s a huge advantage to appreciating and understanding our effort and contributions.
 * Workflow of creating a branch and opening a pull request.
    1. Create the branch in SCP via the UI.
       * Ensure the correct base/parent branch is used when creating in SCP.
@@ -269,10 +273,6 @@ Git Evangelism @ Mortgage Cadence
      `git push <remote> <branch>`
    * *Pull*: Retrieve the remote branch and update the local copy.  
      `git pull <remote> <branch> --rebase`
-* Why do we first create our branches in SCP?
-    * There are two main reasons that are advantageous for us to create branches in SCP:
-        1.	Our branches are then always created at the tip of the parent branch (this is just a fancy term in Git for the most recent commit on a branch). In turn, this keeps us in the habit of always updating our local repository with the commits from the remote.
-        1.	Provide visibility to our development organization on the state of what is currently getting worked on and where it is happening. Simply looking at the branches view in TFS allows any member of the dev group to look at the currently in-progress work. That’s a huge advantage to appreciating and understanding our effort and contributions.
 
 ## Issues Management
 * Create issues in Source Control Provider.
