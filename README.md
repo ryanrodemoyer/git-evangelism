@@ -14,15 +14,6 @@ Git Evangelism @ Mortgage Cadence
 ## Introduction
 * Prequisites
     * Git experience: none.
-    * Software Installation:
-      * Disclaimer: This is my recommendation software stack for working with Git and thus this is how I will present the tools I have found to be helpful and enable my success with Git. You are under no obligation to continue with these tools. Most likely there is a better combination I have yet to discover and in that case, please share you findings with me : )
-      * Downloaded and/or installed software:
-         * Git (https://github.com/git-for-windows/git/releases/download/v2.15.0.windows.1/Git-2.15.0-64-bit.exe).
-         * Beyond Compare (https://www.scootersoftware.com/BCompare-4.2.3.22587.exe).
-         * Sublime Text (https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe).
-         * Sourcetree (https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.3.5.0.exe).
-         * Git LFS (https://github.com/git-lfs/git-lfs/releases/download/v2.3.4/git-lfs-windows-2.3.4.exe).
-      * Instructions: Accept defaults unless you feel strongly about a different option or know something else that I do not know. In that case, please share with me : )
 * Survey
 * Brief history of Git
     * Creator
@@ -34,46 +25,53 @@ Git Evangelism @ Mortgage Cadence
     * see bottom of doc
     
 ## Initial Configuration
-* Complete Individually
+* Software Installation:
+   * Disclaimer: This is my recommendation software stack for working with Git and thus this is how I will present the tools I have found to be helpful and enable my success with Git. You are under no obligation to continue with these tools. Most likely there is a better combination I have yet to discover and in that case, please share you findings with me : )
+   * Downloaded and/or installed software:
+      * Git (https://github.com/git-for-windows/git/releases/download/v2.15.0.windows.1/Git-2.15.0-64-bit.exe).
+      * Beyond Compare (https://www.scootersoftware.com/BCompare-4.2.3.22587.exe).
+      * Sublime Text (https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe).
+      * Sourcetree (https://downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-2.3.5.0.exe).
+      * Git LFS (https://github.com/git-lfs/git-lfs/releases/download/v2.3.4/git-lfs-windows-2.3.4.exe).
+   * Instructions: Accept defaults unless you feel strongly about a different option or know something else that I do not know. In that case, please share with me : )
    * Sourcetree with Beyond Compare
       * Select __Tools | Options__.
       * Go to the __Diff tab__
          * Choose 'Beyond Compare' for External Diff Tool and Merge Tool.
-* Complete with Group
-   * Command Line Setup
-       * Initial configuration required by new Git installation. We use the `--global' flag so settings are stored in C:\Users\profile\\.gitconfig. All repositories on your system will respect this configuration information. Quotes are not needed around paths with spaces but special characters in the path will require the full path wrapped in quotation marks.
-       * *Use your path for Beyond Compare if it differs from below.*
-       * An alternative to typing these manually is to use the `config.<platform>.sh` script in the repo and execute in Git Bash.  
-         `bash config.sh`
-       * __Use Git Bash to enter these commands otherwise you risk syntax errors.__
-           * git large file storage  
-               `git lfs install`
-           * git config credential helper  
-               `git config --global credential.helper manager`
-           * git config user name  
-               `git config --global user.name "Joe Dirt"`  
-           * git config user email  
-               `git config --global user.email joedirt@thedirtfamily.com`  
-           * git config difftool  
-               `git config --global diff.tool bc`  
-               `git config --global difftool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
-               `git config --global difftool.prompt false`  
-           * git config mergetool  
-               `git config --global merge.tool bc`  
-               `git config --global mergetool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
-           * git config editor (default editor is Vim so if you love Vim then disregard this command)   
-               `git config --global core.editor "'C:/Program Files/Sublime Text 3/subl.exe' -w"`
-           * git configure merge to use no fast forward by default  
-               `git config --global merge.ff no`
-           * git configure to not manipulate line endings  
-               `git config --global core.autocrlf false`
-           * git config view all config options for --global  
-               `git config --global --list`
-      * Override default behaviors
-           * git config default merge to be non-fast-forward  
-               `git config --global merge.ff false`
-           * git config default pull strategy to be fast-forward  
-               `git config --global pull.ff only`
+* Git Bash Setup
+    * Initial configuration required by new Git installation. We use the `--global` flag so settings are stored in `C:\Users\profile\\.gitconfig`. All repositories on your system will respect this configuration information. Quotes are not needed around paths with spaces but special characters in the path will require the full path wrapped in quotation marks.
+    * *Use your path for Beyond Compare if it differs from below.*
+    * An alternative to typing these manually is to use the `config.<platform>.sh` script in the repo and execute in Git Bash.  
+      `bash config.sh`
+    * __Use Git Bash to enter these commands otherwise you risk syntax errors.__
+        * git large file storage  
+            `git lfs install`
+        * git config credential helper  
+            `git config --global credential.helper manager`
+        * git config user name  
+            `git config --global user.name "Joe Dirt"`  
+        * git config user email  
+            `git config --global user.email joedirt@thedirtfamily.com`  
+        * git config difftool  
+            `git config --global diff.tool bc`  
+            `git config --global difftool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
+            `git config --global difftool.prompt false`  
+        * git config mergetool  
+            `git config --global merge.tool bc`  
+            `git config --global mergetool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
+        * git config editor (default editor is Vim so if you love Vim then disregard this command)   
+            `git config --global core.editor "'C:/Program Files/Sublime Text 3/subl.exe' -w"`
+        * git configure merge to use no fast forward by default  
+            `git config --global merge.ff no`
+        * git configure to not manipulate line endings  
+            `git config --global core.autocrlf false`
+        * git config view all config options for --global  
+            `git config --global --list`
+   * Override default behaviors
+        * git config default merge to be non-fast-forward  
+            `git config --global merge.ff false`
+        * git config default pull strategy to be fast-forward  
+            `git config --global pull.ff only`
 * GUI tool Setup
     * My personal opinion: You **need** to learn Git from the command line and then incorporate a GUI tool. The command line is the only way to truly understand how Git works and how to harness the power of the tool. Once you have an understanding of Git from the command line, then incorporate a GUI tool. Some actions in Git are easier from the command line and some are easier from a GUI. The quality of UI tools for Git varies wildly and Sourcetree is my personal favorite GUI tool for Git. Sourcetree is free.
 
