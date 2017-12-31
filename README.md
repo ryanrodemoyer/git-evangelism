@@ -283,6 +283,11 @@ Git Evangelism @ Mortgage Cadence
       `git add .`  
       `git commit -m "<message>"`
 * Git Shortcuts
+    * Commit
+      * commit all tracked modified and/or staged files. __BE CAREFUL!__
+         `git commit -am "commit-message"
+      * meld current changes in to the previous commit thereby rewriting history of branch tip  
+         `git commit --amend -am "commit-message"
     * Config
       * show all configured configs  
         `git config --list`
