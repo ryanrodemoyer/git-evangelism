@@ -213,6 +213,8 @@ Git Evangelism @ Mortgage Cadence
       * interactive rebase
          * Powerful mechanism to squash, reorder and ammend commits that exist on a specific branch.  
            `git rebase -i`
+         * Rebase entire repository from tip of current branch to original commit  
+           `git rebase -i --root`
    
 ## Using Git With SCP
 * Why do I need SCP?
