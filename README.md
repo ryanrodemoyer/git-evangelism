@@ -284,10 +284,10 @@ Git Evangelism @ Mortgage Cadence
       `git commit -m "<message>"`
 * Git Shortcuts
     * Commit
-      * commit all tracked modified and/or staged files. __BE CAREFUL!__
-         `git commit -am "commit-message"
-      * meld current changes in to the previous commit thereby rewriting history of branch tip  
-         `git commit --amend -am "commit-message"
+      * commit all tracked modified and/or staged files. __BE CAREFUL!__  
+         `git commit -am "commit-message"`
+      * meld current changes in to the previous commit thereby rewriting history of branch tip  
+         `git commit --amend -am "commit-message"`
     * Config
       * show all configured configs  
         `git config --list`
@@ -295,8 +295,12 @@ Git Evangelism @ Mortgage Cadence
       * list all remotes in the repository  
         `git remote -v`
     * Branches
-      * list all branches in the repository
+      * list all branches in the repository  
         `git branch -a`
+      * reset local version of branch to what exists in remote. __THIS WILL DISCARD UNPUSHED COMMITS!__  
+        `git checkout <branch-name>`  
+        `git fetch <remote> <branch-name>`  
+        `git reset --hard <remote>/<branch-name>`
     * Log
       * show pretty print graph of commits in your repository  
          `git log --decorate --oneline --graph`
