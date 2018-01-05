@@ -262,7 +262,7 @@ Git Evangelism @ Mortgage Cadence
       * Pull the new branch.  
         `git pull <origin> <new-branch>`
       * Switch to the new branch.  
-        `git checkout -b <new-branch>`
+        `git checkout <new-branch>`
       * Commit one or more times to `<new-branch>`.
       * Send local copy of branch to the server.  
         `git push <remote> <new-branch>`
