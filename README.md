@@ -299,6 +299,8 @@ Git Evangelism @ Mortgage Cadence
     * Branches
       * list all branches in the repository  
         `git branch -a`
+      * remove local copy of remote branches where the branch no longer exists in the remote  
+        `git fetch --prune`
       * reset local version of branch to what exists in remote. __THIS WILL DISCARD UNPUSHED COMMITS!__  
         `git checkout <branch-name>`  
         `git fetch <remote> <branch-name>`  
