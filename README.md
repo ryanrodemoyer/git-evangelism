@@ -60,6 +60,7 @@ Git Evangelism @ Mortgage Cadence
         * git config mergetool  
             `git config --global merge.tool bc`  
             `git config --global mergetool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"`  
+            `git config --global mergetool.keepBackup false`  
         * git config editor (default editor is Vim so if you love Vim then disregard this command)   
             `git config --global core.editor "'C:/Program Files/Sublime Text 3/subl.exe' -w"`
         * git configure merge to use no fast forward by default  
