@@ -12,3 +12,6 @@ git config --global merge.ff no
 git config --global core.autocrlf false
 git config --global merge.ff false
 git config --global pull.ff only
+
+# auto discard .orig files after a merge conflict is resolved
+git config --global mergetool.keepBackup false
