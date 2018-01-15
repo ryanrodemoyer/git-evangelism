@@ -63,8 +63,6 @@ Git Evangelism @ Mortgage Cadence
             `git config --global mergetool.keepBackup false`  
         * git config editor (default editor is Vim so if you love Vim then disregard this command)   
             `git config --global core.editor "'C:/Program Files/Sublime Text 3/subl.exe' -w"`
-        * git configure merge to use no fast forward by default  
-            `git config --global merge.ff no`
         * git configure to not manipulate line endings  
             `git config --global core.autocrlf false`
         * git config view all config options for --global  
