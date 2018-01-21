@@ -176,8 +176,8 @@ Git Evangelism @ Mortgage Cadence
 * Merging branches up or down.
    * *Merging up* implies moving changes from a child branch in to the parent branch.
    * *Merging down* implies integrating changes from a parent branch in to the child branch.
-   * fast forward or not fast forward?
-      * Fast-forward relates to how the log will appear after a merge by either showing a merge commit or "moving" the changes from the child branch on to the log of the parent branch. A fast-forward merge is possible only when the parent branch has not diverged from the child branch when attempting the merge.
+* Fast-Forward versus No Fast-Forward?
+   * Fast-forward relates to how the log will appear after a merge by either showing a merge commit or "moving" the changes from the child branch on to the log of the parent branch. A fast-forward merge is possible only when the parent branch has not diverged from the child branch when attempting the merge.
 * Rebase
    * Rebase a feature branch.
       * This implies that a child parent needs to incorporate changes from the parent branch. Rebase the feature branch if the commits on the branch are few/minimal. This is useful to keep the history clean.  
