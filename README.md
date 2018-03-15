@@ -1,5 +1,5 @@
-Git Evangelism @ Mortgage Cadence
-=================================
+Git Evangelism
+==============
 
 ## Contents
 1. [Introduction](#introduction)
