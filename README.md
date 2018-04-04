@@ -110,7 +110,9 @@ Git Evangelism
         * open diff in configured diff tool  
             `git difftool <path/to/file>`
         * open folder based view of all modified files in repository  
-            `git difftool -d`
+            `git difftool -d` or `git difftool --dir-diff`
+        * entire branch diff opened in difftool
+            `git difftool <basebranch>..<currentbranch> --dir-diff`
         * preface any of the above `diff` commands with `start` to prevent the command prompt from blocking
             `start git difftool <path/to/file>`
 * Commit History
@@ -157,6 +159,8 @@ Git Evangelism
    * First set of commands for branches.
       * List all branches that exist in the repository (local and remote)  
          `git branch --all`
+      * List all branches and filter the output via grep
+         `git branch --all | grep -i "filtertext"`
       * Create a new branch and do nothing else.  
          `git branch <branch-name>`
       * Switch to a different branch.  
@@ -167,10 +171,17 @@ Git Evangelism
    * When you're ready to merge changes with the parent branch:
       * Note: this scenario applies only when working locally. Merges occur in the Source Control Provider tool when colloborating in a team environment.
       * Commit, undo or stash all changes in workspace.
-      * Switch to parent branch.  
-         `git checkout <parent-branch-name>`
-      * Merge child branch in to parent branch via force a merge-commit.  
-         `git merge <child-branch-name> --no-ff`
+      * Switch to base branch.  
+         `git checkout <base-branch-name>`
+      * Merge feature branch in to base branch and force a merge-commit.  
+         `git merge <feature-branch-name> --no-ff`
+    * Detached Head 
+      * Switch your repository to a specific commit (enter detached head).
+         `git checkout <commit-hash>`
+      * Need to make changes? Create a branch and then commit.
+         `git checkout -b <new-branch-name>`
+      * Switch to the latest of the branch (exit detached head).
+         `git checkout <branch-name>`
 
 ## Merge and Rebase
 * Merging branches up or down.
