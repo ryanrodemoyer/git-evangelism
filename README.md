@@ -44,7 +44,7 @@ Git Evangelism
     * **Required for Git**
         * Configure Git username (used for commit history)  
             `git config --global user.name "Joe Dirt"`  
-        * Configure Git email (used for commit history)
+        * Configure Git email (used for commit history)  
             `git config --global user.email joedirt@thedirtfamily.com` 
     * Scripted Setup (preferred)
         * Download the config file via curl
@@ -117,7 +117,7 @@ Git Evangelism
             `git difftool <path/to/file>`
         * open folder based view of all modified files in repository  
             `git difftool -d` or `git difftool --dir-diff`
-        * entire branch diff opened in difftool
+        * entire branch diff opened in difftool  
             `git difftool <basebranch>..<currentbranch> --dir-diff`
         * preface any of the above `diff` commands with `start` to prevent the command prompt from blocking
             `start git difftool <path/to/file>`
