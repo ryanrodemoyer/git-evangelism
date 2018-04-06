@@ -173,14 +173,14 @@ Git Evangelism
          `git checkout <branch-name>`
       * Create a new branch __and__ switch to it (shortcut).  
          `git checkout -b <branch-name>`
-   * Start working on your feature and/or specific set of related changes. Commit. Commit. Commit.
-   * When you're ready to merge changes with the parent branch:
+   * Start working on your story and/or specific set of related changes. Commit. Commit. Commit.
+   * When you're ready to merge changes with the base branch:
       * Note: this scenario applies only when working locally. Merges occur in the Source Control Provider tool when colloborating in a team environment.
       * Commit, undo or stash all changes in workspace.
       * Switch to base branch.  
          `git checkout <base-branch-name>`
-      * Merge feature branch in to base branch and force a merge-commit.  
-         `git merge <feature-branch-name> --no-ff`
+      * Merge story branch into base branch and force a merge-commit.  
+         `git merge <story-branch-name> --no-ff`
     * Detached Head 
       * Switch your repository to a specific commit (enter detached head).
          `git checkout <commit-hash>`
@@ -191,45 +191,47 @@ Git Evangelism
 
 ## Merge and Rebase
 * Merging branches up or down.
-   * *Merging up* implies moving changes from a child branch in to the parent branch.
-   * *Merging down* implies integrating changes from a parent branch in to the child branch.
+   * *Merging up* implies moving changes from a story branch into the base branch.
+   * *Merging down* implies integrating changes from a base branch into the story branch.
 * Fast-Forward versus No Fast-Forward?
-   * Fast-forward relates to how the log will appear after a merge by either showing a merge commit or "moving" the changes from the child branch on to the log of the parent branch. A fast-forward merge is possible only when the parent branch has not diverged from the child branch when attempting the merge.
+   * Fast-forward relates to how the log will appear after a merge by either showing a merge commit or "moving" the changes from the story branch on to the log of the base branch. A fast-forward merge is possible only when the base branch has not diverged from the story branch when attempting the merge. A base branch diverges when it receives additional commits after the story branch is created.
 * Rebase
-   * Rebase a feature branch.
-      * This implies that a child parent needs to incorporate changes from the parent branch. Rebase the feature branch if the commits on the branch are few/minimal. This is useful to keep the history clean.  
-        `git checkout <child-branch>`  
-        `git rebase <parent-branch>`
+   * Rebase a story branch.
+      * This implies that a story branch needs to incorporate changes from the base branch. Rebase the story branch if the commits on the branch are few/minimal. This is useful to keep the history clean.  
+        `git checkout <story-branch>`  
+        `git rebase <base-branch>`
    * Pull and rebase.
-      * Developers should *pull and rebase* when updating their copy of a branch from the remote. This is required so that a merge commit is not created when merely updating a branch.  
+      * Developers should always *pull and rebase* when updating their copy of a branch from the remote. This is required so that a merge commit is not created when merely updating a branch.  
         `git pull <remote-name> <branch> --rebase`
 * When to use which
-   * `merge` when integrating from a child branch to the parent branch.
+   * `merge` when integrating from a story branch to the base branch.
       * Almost all merge activities should occur in SCP via pull requests. Try to avoid `merge` commands in your local repository unless it's absolutely required.
-   * `rebase` when intergrating from the parent branch to the child branch.
-      * `git pull --rebase` if working on a shared branch
-      * If working on a feature branch:
-         * Switch to parent branch and `git pull --rebase <remote-name> <branch-name>`.
-         * Switch to feature branch and `git rebase <branch-name>` or to clean up local commits `git rebase -i <branch-name>`.
+   * `rebase` when intergrating from the base branch to the story branch.
+      * `git pull <remote-name> <branch> --rebase` if working on a shared branch
+      * If working on a story branch:
+         * Switch to base branch and `git pull <remote-name> <base-branch-name> --rebase`.
+         * Switch to story branch and `git rebase <base-branch-name>` or to clean up local commits `git rebase -i <base-branch-name>`.
       * Notes
-         * `rebase` keeps history clean and readable and minimizes merge commits (merge commits are noise in feature branches)
+         * `rebase` keeps history clean and readable and minimizes merge commits (merge commits are noise in story branches)
          * `rebase` is rewriting history - BE CAREFUL IF YOU'VE ALREADY PUSHED YOUR BRANCH TO THE REMOTE!
 * Squashing
    * Purpose: to condense 2 or more commits in to a single logical commit containing the aggregate result of all changes from the targeted commits.
-   * Benefit: provide a clean and concise log of changes when merging feature branches to upstreams. The developer can commit incrementally or as he/she sees best but then clean up the log before merging.
+   * Benefit: provide a clean and concise log of changes when merging story branches to upstreams. The developer can commit incrementally or as he/she sees best but then clean up the log before merging.
    * Methods
-      * soft reset
-         * "undo" the last N number of commits and move the changes to the index (ie. staged).
-         * Undo the single most recent commit   
+      * soft reset - undo commits and move the changes to the index (ie. staged).  
+         * the last N number of commits.  
+          `git reset --soft HEAD~N`
+         * the single most recent commit.  
           `git reset --soft HEAD~1`
-      * hard reset
-         * "undo" the last N number of commits **and discard the contents**.
-         * Undo the single most recent commit.  
+      * hard reset - "undo" the last N number of commits **and discard the contents**.  
+         * the last N number of commits.  
+           `git reset --hard HEAD~N`
+         * the single most recent commit.  
            `git reset --hard HEAD~1`
-      * interactive rebase
-         * Powerful mechanism to squash, reorder and ammend commits that exist on a specific branch.  
-           `git rebase -i`
-         * Rebase entire repository from tip of current branch to original commit  
+      * interactive rebase - powerful mechanism to squash, reorder and ammend commits that exist on a specific branch. 
+         *  Modify the set of commits from tip of current branch to the base branch common ancestor.  
+           `git rebase -i <base-branch>`
+         * Rebase entire repository from tip of current branch to original commit.  
            `git rebase -i --root`
    
 ## Using Git With SCP
@@ -265,25 +267,25 @@ Git Evangelism
 ## Branches and Pull Requests
 * Why do we first create our branches in SCP?
     * There are two main reasons that are advantageous for us to create branches in SCP:
-        1.	Our branches are then always created at the tip of the parent branch (this is just a fancy term in Git for the most recent commit on a branch). In turn, this keeps us in the habit of always updating our local repository with the commits from the remote.
+        1.	Our story branches are then always created at the tip of the base branch (this is just a fancy term in Git for the most recent commit on a branch). In turn, this keeps us in the habit of always updating our local repository with the commits from the remote.
         1.	Provide visibility to our development organization on the state of what is currently getting worked on and where it is happening. Simply looking at the branches view in TFS allows any member of the dev group to look at the currently in-progress work. That’s a huge advantage to appreciating and understanding our effort and contributions.
 * Workflow of creating a branch and opening a pull request.
    1. Create the branch in SCP via the UI.
-      * Ensure the correct base/parent branch is used when creating in SCP.
+      * Ensure the correct base branch is used when creating in SCP.
    1. Locally:
-      * Switch to the desired parent branch.  
-        `git checkout <branch>`
+      * Switch to the desired base branch.  
+        `git checkout <base-branch>`
       * Update the branch.  
-        `git pull <remote> <branch> --rebase`
+        `git pull <remote> <base-branch> --rebase`
       * Pull the new branch.  
-        `git pull <origin> <new-branch>`
+        `git pull <origin> <story-branch>`
       * Switch to the new branch.  
-        `git checkout <new-branch>`
-      * Commit one or more times to `<new-branch>`.
+        `git checkout <story-branch>`
+      * Commit one or more times to `<story-branch>`.
       * Send local copy of branch to the server.  
-        `git push <remote> <new-branch>`
-   1. In SCP, open a *pull request* to merge `<new-branch>` in to `<parent-branch>`.
-      * If SCP offers an auto-squash feature when closing a pull request, **USE IT!!**
+        `git push <remote> <story-branch>`
+   1. In SCP, open a *pull request* to merge `<story-branch>` into `<base-branch>`.
+      * If SCP offers an auto-squash merge when closing a pull request, **USE IT!!**
       * Commits stack on branch with pull requests. Add more commits and they appear automagically on your pull request.
       * Unrelated commits belong on a different branch.
       * Collaborating on pull requests by reviewing the charges and adding your comments.
