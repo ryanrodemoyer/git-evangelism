@@ -14,6 +14,7 @@ git config --global difftool.prompt false
 # make beyond compare the mergetool
 git config --global merge.tool bc
 git config --global mergetool.bc.path "C:/Program Files/Beyond Compare 4/bcomp.exe"
+git config --global mergetool.keepBackup false
 
 # make sublime text the default text editor
 git config --global core.editor "'C:/Program Files/Sublime Text 3/subl.exe' -w"
