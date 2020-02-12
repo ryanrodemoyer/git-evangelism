@@ -29,11 +29,11 @@ Git Evangelism
 * Software Installation:
    * Disclaimer: This is my recommendation software stack for working with Git and thus this is how I will present the tools I have found to be helpful and enable my success with Git. You are under no obligation to continue with these tools. Most likely there is a better combination I have yet to discover and in that case, please share you findings with me : )
    * Downloaded and/or installed software:
-      * Git (https://github.com/git-for-windows/git/releases/download/v2.15.0.windows.1/Git-2.15.0-64-bit.exe).
-      * Beyond Compare (https://www.scootersoftware.com/BCompare-4.2.3.22587.exe).
-      * Sublime Text (https://download.sublimetext.com/Sublime%20Text%20Build%203143%20x64%20Setup.exe).
-      * SmartGit (https://www.syntevo.com/downloads/smartgit/smartgit-win-18_1_2.zip).
-      * Git LFS (https://github.com/git-lfs/git-lfs/releases/download/v2.3.4/git-lfs-windows-2.3.4.exe).
+      * Git (https://git-scm.com/download/win).
+      * Beyond Compare (https://www.scootersoftware.com/download.php).
+      * Sublime Text (https://www.sublimetext.com/3).
+      * SmartGit (https://www.syntevo.com/downloads/smartgit).
+      * Git LFS (bundled with the latest versions of Git).
    * Instructions: Accept defaults unless you feel strongly about a different option or know something else that I do not know. In that case, please share with me : )
    * SmartGit with Beyond Compare
       * *Use your path for Beyond Compare if it differs from below.*
